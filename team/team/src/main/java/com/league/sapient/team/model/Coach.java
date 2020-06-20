@@ -1,33 +1,53 @@
+
 package com.league.sapient.team.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "coach_name",
+    "coach_country",
+    "coach_age"
+})
 public class Coach {
 
-	private String coachName;
-	private String coachCountry;
-	private String coachAge;
+    @JsonProperty("coach_name")
+    private String coachName;
+    @JsonProperty("coach_country")
+    private String coachCountry;
+    @JsonProperty("coach_age")
+    private String coachAge;
 
-	public String getCoachName() {
-		return coachName;
-	}
+    @JsonProperty("coach_name")
+    public String getCoachName() {
+        return coachName;
+    }
 
-	public void setCoachName(String coachName) {
-		this.coachName = coachName;
-	}
+    @JsonProperty("coach_name")
+    public void setCoachName(String coachName) {
+        this.coachName = coachName;
+    }
 
-	public String getCoachCountry() {
-		return coachCountry;
-	}
+    @JsonProperty("coach_country")
+    public String getCoachCountry() {
+        return coachCountry;
+    }
 
-	public void setCoachCountry(String coachCountry) {
-		this.coachCountry = coachCountry;
-	}
+    @JsonProperty("coach_country")
+    public void setCoachCountry(String coachCountry) {
+        this.coachCountry = coachCountry;
+    }
 
-	public String getCoachAge() {
-		return coachAge;
-	}
+    @JsonProperty("coach_age")
+    public String getCoachAge() {
+        return coachAge;
+    }
 
-	public void setCoachAge(String coachAge) {
-		this.coachAge = coachAge;
-	}
+    @JsonProperty("coach_age")
+    public void setCoachAge(String coachAge) {
+        this.coachAge = coachAge;
+    }
 
 }
